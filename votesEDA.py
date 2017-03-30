@@ -9,3 +9,4 @@ df = dataExtractor.getDataFrameFromXml(dataFile)
 # print temp_df.describe
 
 print df.describe(include='all')
+

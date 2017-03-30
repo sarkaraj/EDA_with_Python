@@ -1,3 +1,8 @@
+"""
+Author: Rajarshi Sarkar
+Use: Extract Data from XML into a DataFrame
+"""
+
 import itertools
 import xml.etree.ElementTree as xmlread
 
