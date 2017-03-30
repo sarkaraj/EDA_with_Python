@@ -1,6 +1,9 @@
+import sys
+
 import dataExtractor
 
-dataFile = "./ai.stackexchange.com/Votes.xml"
+dataFile = sys.argv[1]
+saveFile = sys.argv[2]
 
 df = dataExtractor.getDataFrameFromXml(dataFile)
 
@@ -8,5 +11,7 @@ df = dataExtractor.getDataFrameFromXml(dataFile)
 #
 # print temp_df.describe
 
-print df.describe(include='all')
+# print df
+# print df.describe(include='all')
 
+df.to_csv(saveFile, sep=',', header=True, index=True, line_terminator='\n')
